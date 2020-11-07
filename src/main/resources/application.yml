@@ -1,0 +1,6 @@
+app:
+  mongo:
+    host: mongodb.social.local
+    port: 27017
+    dbname: pluralsigth-reactive
+
