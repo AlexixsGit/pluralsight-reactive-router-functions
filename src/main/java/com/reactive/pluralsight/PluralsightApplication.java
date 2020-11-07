@@ -24,6 +24,8 @@ public class PluralsightApplication {
     CommandLineRunner init(ReactiveMongoOperations reactiveMongoOperations, ProductRepository productRepository) {
         return args -> {
 
+            productRepository.deleteAll().subscribe();
+
             Flux<Product> productFlux = Flux.just(
                     new Product(null, "Ipad pro", 4000000d),
                     new Product(null, "Imac 19 inch", 5000000d),
